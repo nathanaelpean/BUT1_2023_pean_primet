@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="script.js" as="script">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./cdn/css/style.css">
     <script src="script.js" defer></script>
     <meta name="canonical" href="https://confiz.fyji.fr/" />
     <meta name="og:title" content="Confiz - Boutique en ligne de confiseries">
