@@ -13,7 +13,7 @@
         </ul>
     </div>
     <ul class="action">
-        <li class="user image"></div>
-        <li class="cart image"></div>
+        <li class="user image"><a href=""></a></div>
+        <li class="cart image"><a href=""></a></div>
     </ul>
 </nav>

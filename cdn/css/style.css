@@ -62,3 +62,8 @@ nav{
 nav .logo{
     background-image: url("../svg/logo-white.svg");
 }
+
+nav li{
+    list-style-type: none;
+    
+}
