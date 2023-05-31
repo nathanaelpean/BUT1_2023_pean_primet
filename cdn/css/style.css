@@ -53,7 +53,7 @@ nav{
     background-color: var(--col-pink1);
     background-image: url("../svg/gradient-navbar.svg");
     background-size: contain;
-    background-position: top right;
+    background-position: top 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
