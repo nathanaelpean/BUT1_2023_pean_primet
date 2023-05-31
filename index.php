@@ -1,14 +1,16 @@
+<?php 
+    $root = $_SERVER['DOCUMENT_ROOT'] 
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Index</title>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <meta name="description" content="Confiz - Votre boutique en ligne de confiseries délicieuses et accessibles. Découvrez notre large sélection de bonbons, chocolats et bien plus.">
     <meta name="keywords" content="confiseries, bonbons, chocolats, sucreries, boutique en ligne">
     <meta name="author" content="Confiz">
@@ -34,7 +36,9 @@
     <meta name="og:image:alt" content="Logo Confiz" />
     <link rel="icon" href="favicon.svg">
 </head>
+<header>
+    <?php require_once( $root.'/components/navbar.php'); ?>
+</header>
 <body>
-    <?php echo("Bonsoir à tous")?>
 </body>
 </html>
