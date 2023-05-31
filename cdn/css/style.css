@@ -16,7 +16,7 @@
 
 /* Global */
 body{
-    padding: ;
+    padding: 3.75em 0;
     margin: 0;
 }
 
@@ -43,4 +43,14 @@ form button{
 /* Nav */
 nav{
     position: fixed;
+    inset: 0 0 auto 0;
+    height: 3.75em;
+    background-color: var(--col-pink1);
+    background-image: url("../svg/gradient-navbar.svg");
+    background-size: contain;
+    background-position: top right;
+}
+
+nav .logo{
+    
 }
