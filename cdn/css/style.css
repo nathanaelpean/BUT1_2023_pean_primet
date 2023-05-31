@@ -53,7 +53,8 @@ nav{
     background-color: var(--col-pink1);
     background-image: url("../svg/gradient-navbar.svg");
     background-size: contain;
-    background-position: top 100%;
+    background-position-x: 170%;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -65,5 +66,11 @@ nav .logo{
 
 nav li{
     list-style-type: none;
+    height: 48px;
+    min-width: 48px;
+    display: block;
+}
+
+nav .hamburger{
     
 }
