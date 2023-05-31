@@ -20,6 +20,11 @@ body{
     margin: 0;
 }
 
+.image{
+    background-position: center;
+    background-size: cover;
+}
+
 button{
     border: 2px solid var(--col-pink1);
     border-radius: 3em;
@@ -49,8 +54,11 @@ nav{
     background-image: url("../svg/gradient-navbar.svg");
     background-size: contain;
     background-position: top right;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav .logo{
-    
+    background-image: url("../svg/logo-white.svg");
 }
