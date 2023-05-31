@@ -1,0 +1,17 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Sniglet&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
+
+/* Variables */
+:root{
+    --ft-serif: 'Sniglet', cursive;
+    --ft-sserif: 'Rochester', cursive;
+    --col-black: #000;
+    --col-white: #FFF;
+    --col-grey: #888;
+    --col-pink1: #CD1D72;
+    --col-pink2: #FF48A0;
+    --col-pink3: #FFB1D7;
+}
+
+/* Global */
