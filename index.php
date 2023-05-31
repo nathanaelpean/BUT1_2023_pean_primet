@@ -37,8 +37,11 @@
     <link rel="icon" href="favicon.svg">
 </head>
 <header>
-    <?php require_once( $root.'/components/navbar.php'); ?>
+    <?php require_once($root.'/components/navbar.php'); ?>
 </header>
+<main>
+</main>
+<?php require_once($root.'/components/footer.php'); ?>
 <body>
 </body>
 </html>
