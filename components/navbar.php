@@ -3,7 +3,7 @@
 ?>
 
 <nav>
-    <div class="logo"></div>
+    <div class="logo image"></div>
     <div>
         <div class="hamburger">
             <div></div>
