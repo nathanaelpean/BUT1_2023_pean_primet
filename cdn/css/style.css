@@ -66,6 +66,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 50;
 }
 
 nav li{
@@ -127,18 +128,43 @@ nav .items a{
         inset: 60px 0 auto 0;
         background-color: var(--col-white);
         flex-direction: column;
+        border-bottom: 3px solid var(--col-pink1);
+        z-index: 49;
+        overflow: hidden;
+        transition: 0.5s all ease;
+        transform: translateY(-300px);
     }
-    nav .items>div{
-        
+    nav .items li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     nav .items a{
         color: var(--col-pink1);
+    }
+    .hamburger:focus .items{
+        transform: translateY(0px);
     }
 }
 @media(min-width:600px){
     nav .humberger{
         display: none;
     }
+}
+nav .action{
+    display: flex;
+}
+nav .action a{
+    display: block;
+    width: 40px;
+    height: 40px;
+    margin-right: 8px;
+}
+nav .action .user{
+    background-image: url("../svg/user-3col.svg");
+}
+nav .action .cart{
+    background-image: url("../svg/cart-3col.svg");
 }
 
 
