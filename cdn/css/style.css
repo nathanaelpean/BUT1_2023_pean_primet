@@ -305,9 +305,10 @@ li{
 
 .img-index{
     display: block;
-    width: 100%;
+    width: calc(100% + 10px);
     aspect-ratio: 1 / 1;
     transform: rotate(90deg);
     background-image: url("../img/bonbons1.png");
     background-position-x: 0;
+    margin: -5px;
 }
