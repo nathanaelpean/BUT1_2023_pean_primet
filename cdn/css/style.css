@@ -198,6 +198,9 @@ nav .items a{
     nav .logo{
         margin-left: 2.5rem;
     }
+    main{
+        padding: 5px;
+    }
 }
 @media(min-width:600px){
     nav .hamburger{
@@ -213,7 +216,7 @@ nav .items a{
         gap: 2rem;
     }
     main{
-        padding: 0 150px;
+        padding: 15px 150px;
     }
 }
 
@@ -261,8 +264,6 @@ nav .action .cart{
 
 
 footer{
-    position: absolute;
-    bottom: 0;
     background-color: #CD1D72;
     width: 100%;
     display: flex;
@@ -287,4 +288,13 @@ footer p{
 
 li{
     list-style-type: none;
+}
+
+.img-index{
+    display: block;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    transform: rotate(90deg);
+    background-image: url("../img/bonbons1.png");
+    background-position-x: 0;
 }
