@@ -63,6 +63,7 @@ a{
 }
 .form-compact *{
     font-family: var(--ft-serif);
+    z-index: 48;
 }
 .form-compact .box{
     display: flex;
@@ -110,8 +111,8 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    z-index: 50;
 }
+
 
 nav li{
     list-style-type: none;
@@ -167,6 +168,11 @@ nav .items a{
     text-decoration: none;
     color: var(--col-white);
 }
+
+nav .items a:hover{
+    filter: drop-shadow(0 0 0.75rem white);
+    transition: 0.5s;
+}
 @media(max-width:600px){
     nav .items{
         position: fixed;
@@ -174,10 +180,17 @@ nav .items a{
         background-color: var(--col-white);
         flex-direction: column;
         border-bottom: 3px solid var(--col-pink1);
-        z-index: 49;
+        z-index: 40;
         overflow: hidden;
         transition: 0.5s all ease;
         transform: translateY(-300px);
+    }
+    nav, nav *{
+        z-index: 50;
+    }
+
+    .items, .items *{
+        z-index: 40;
     }
     nav .items li{
         display: flex;
