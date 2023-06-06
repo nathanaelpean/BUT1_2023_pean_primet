@@ -11,8 +11,9 @@ require_once($root . "./components/head.php");
         <div class="form-compact">
             <form action="/boutiques" method="get">
                 <div class="box">
-                    <legend>titre</legend>
-                    <input type="text" name="search" required>
+                    <legend>Recherchez une boutique</legend>
+                    <input type="text" name="q" required>
+                    <button class="search"></button>
                 </div>
             </form>
         </div>
