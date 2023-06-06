@@ -57,9 +57,12 @@ a{
 
 .form-compact{
     margin: 15px 5px;
-    max-width: 700px;
+    max-width: 400px;
     border: 2px solid var(--col-pink2);
     border-radius: 100px;
+}
+.form-compact *{
+    font-family: var(--ft-serif);
 }
 .form-compact .box{
     display: flex;
@@ -101,7 +104,6 @@ nav{
     inset: 0 0 auto 0;
     height: 3.75em;
     background-color: var(--col-pink1);
-    background-image: url("../svg/gradient-navbar.svg");
     background-size: contain;
     background-position-x: 170%;
     background-repeat: no-repeat;
@@ -210,12 +212,36 @@ nav .items a{
         font-size: 2rem;
         gap: 2rem;
     }
+    main{
+        padding: 0 150px;
+    }
 }
 
 nav .action{
     display: flex;
+    align-items: center;
     justify-content: left;
+    height: 100%;
+    background: white;
+    position: relative;
+    padding-left: 6px;
 }
+nav .action:before, nav .action:after{
+    content: "";
+    position: absolute;
+    height: 100%;
+}
+nav .action:before{
+    width: 20px;
+    background-color: var(--col-pink3);
+    right: 100%;
+}
+nav .action:after{
+    width: 40px;
+    background-color: var(--col-pink2);
+    right: calc(100% + 20px);
+}
+
 nav .action a{
     display: block;
     height: 100%;
