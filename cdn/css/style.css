@@ -55,6 +55,19 @@ a{
     color: var(--col-pink1);
 }
 
+.flex{
+    display: flex;
+}
+.vertical-top{
+    align-items: top;
+}
+.vertical-center{
+    align-items: center;
+}
+.vertical-bottom{
+    align-items: bottom;
+}
+
 .form-compact{
     margin: 15px 5px;
     max-width: 400px;
@@ -111,6 +124,7 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    z-index: 50;
 }
 
 
@@ -305,10 +319,23 @@ li{
 
 .img-index{
     display: block;
-    width: calc(100% + 10px);
+    height: 90vh;
     aspect-ratio: 1 / 1;
-    transform: rotate(90deg);
     background-image: url("../img/bonbons1.png");
+    background-repeat: no-repeat;
     background-position-x: 0;
-    margin: -5px;
+}
+.index-page{
+    padding: 0;
+}
+
+@media(max-width: 600px){
+    .img-index{
+        width: calc(100% + 10px);
+        transform: rotate(90deg);
+        margin: -5px;
+    }
+}
+.index-page .flex{
+    justify-content: flex-end;
 }
