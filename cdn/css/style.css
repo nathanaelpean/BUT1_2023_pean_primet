@@ -73,10 +73,10 @@ a{
     max-width: 400px;
     border: 2px solid var(--col-pink2);
     border-radius: 100px;
+    z-index: 50;
 }
 .form-compact *{
     font-family: var(--ft-serif);
-    z-index: 48;
 }
 .form-compact .box{
     display: flex;
@@ -173,10 +173,16 @@ nav .hamburger div:before{
 nav .hamburger div:after{
     bottom: 0;  
 }
+
+nav, nav *{
+    z-index: 50;
+}
+
 nav .items{
     display: flex;
     padding: 10px 15px;
     font-family: var(--ft-sserif); 
+    z-index: 40;
 }
 nav .items a{
     text-decoration: none;
@@ -194,18 +200,15 @@ nav .items a:hover{
         background-color: var(--col-white);
         flex-direction: column;
         border-bottom: 3px solid var(--col-pink1);
-        z-index: 40;
         overflow: hidden;
         transition: 0.5s all ease;
         transform: translateY(-300px);
     }
-    nav, nav *{
-        z-index: 50;
+
+    .items.active{
+        transform: none;
     }
 
-    .items, .items *{
-        z-index: 40;
-    }
     nav .items li{
         display: flex;
         justify-content: center;
@@ -303,7 +306,6 @@ footer{
 footer ul{
     padding: 0;
 }
-
 footer a{
     color: white;
     text-decoration: underline;

@@ -19,9 +19,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="preload" href="styles.css" as="style">
-    <link rel="preload" href="script.js" as="script">
+    <link rel="preload" href="./cdn/js/script.js" as="script">
     <link rel="stylesheet" href="./cdn/css/style.css">
-    <script src="script.js" defer></script>
+    <script src="./cdn/js/script.js" defer></script>
     <meta name="canonical" href="https://confiz.fyji.fr/" />
     <meta name="og:title" content="Confiz - Boutique en ligne de confiseries">
     <meta name="og:description" content="Découvrez notre large sélection de bonbons, chocolats, gâteaux et plus encore sur Confiz, votre boutique en ligne de confiseries délicieuses et accessibles.">

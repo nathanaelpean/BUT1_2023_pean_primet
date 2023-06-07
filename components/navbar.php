@@ -1,10 +1,10 @@
 <nav>
     <div class="logo image"></div>
-    <div>
-        <div class="hamburger">
+    <div class="mobile-nav">
+        <div class="hamburger" id="burger-btn">
             <div></div>
         </div>
-        <ul class="items">
+        <ul class="items" id="burger">
             <li><a href="./">Accueil</a></li>
             <li><a href="./shop">Boutiques</a></li>
             <li><a href="./contact">Contact</a></li>
