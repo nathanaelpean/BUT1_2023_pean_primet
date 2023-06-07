@@ -7,8 +7,8 @@ require_once($root . "./components/head.php");
     <header>
         <?php require_once($root . '/components/navbar.php'); ?>
     </header>
-    <main class="index-page">
-        <div class="flex vertical-center">
+    <main>
+        <div class="flex">
             <div>
                 <img src="./cdn/svg/logo-3col.svg" width="100%">
                 <div class="form-compact">
