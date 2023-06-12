@@ -30,4 +30,7 @@
     <meta name="og:image" content="https://confiz.fyji.fr/images/logo.png" />
     <meta name="og:image:alt" content="Logo Confiz" />
     <link rel="icon" href="favicon.svg">
+    <?php
+    
+    ?>
 </head>

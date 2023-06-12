@@ -8,13 +8,10 @@ require_once($root . "./components/head.php");
         <?php require_once($root . '/components/navbar.php'); ?>
     </header>
     <main>
-        <?php
-            if(isset($_GET["id"]) && in_array($_GET["id"],req("SELECT boutique_id FROM boutiques"))){
-
-            }else{
-                
-            }
-        ?>
+        <center>
+            <h1>404</h1>
+            <p>Vous avez découvert une page qui n'existe pas, bravo !</p>
+        </center>
     </main>
     <?php require_once($root . '/components/footer.php'); ?>
 </body>

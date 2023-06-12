@@ -1,0 +1,7 @@
+ErrorDocument 404 /404.php
+RewriteEngine On
+RewriteBase /
+RewriteRule ^db\.php$ /404.php [L,R=404]
+RewriteRule ^boutique\.php$ /404.php [L,R=404]
+RewriteRule ^boutiques-liste\.php$ /404.php [L,R=404]
+RewriteRule ^components/ - [R=404]
