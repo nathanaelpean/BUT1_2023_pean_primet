@@ -9,10 +9,14 @@ require_once($root . "./components/head.php");
     </header>
     <main>
         <?php
-            if(isset($_GET["id"]) && in_array($_GET["id"],req("SELECT boutique_id FROM boutiques"))){
-
+            if(isset($_GET["id"])){
+                if(in_array($_GET["id"],req("SELECT boutique_id FROM boutiques"))){
+                    require_once("boutique.php");
+                }else{
+                    require_once("404-frame.php");
+                }
             }else{
-                
+                require_once("boutiques-liste.php");
             }
         ?>
     </main>

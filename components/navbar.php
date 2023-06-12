@@ -6,7 +6,7 @@
         </div>
         <ul class="items" id="burger">
             <li><a href="./">Accueil</a></li>
-            <li><a href="./shop">Boutiques</a></li>
+            <li><a href="./boutiques">Boutiques</a></li>
             <li><a href="./contact">Contact</a></li>
         </ul>
     </div>
