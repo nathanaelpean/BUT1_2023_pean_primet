@@ -314,3 +314,36 @@ li{
     background-position-x: 0;
     margin: -5px;
 }
+
+/*Boutique.php */
+
+h2{
+    font-family: var(--ft-serif);
+    color: var(--col-pink1);
+    font-weight: 600;
+}
+
+.boutique .info{
+    font-family: var(--ft-serif);
+    color: var(--col-grey);
+}
+
+.boutique .action{
+    font-family: var(--ft-serif);
+    color: var(--col-pink1);
+}
+
+.boutique .action::before{
+    content: "";
+    background-image: url(/cdn/svg/pin.svg);
+    background-size: .625rem .625rem;
+    display: inline-block;
+    width: .625rem .625rem;
+}
+
+
+
+.boutique .card{
+    display: flex;
+    flex-direction: column;
+}
