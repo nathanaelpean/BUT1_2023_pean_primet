@@ -328,12 +328,12 @@ h2{
     color: var(--col-grey);
 }
 
-.boutique .action{
+.boutique-action{
     font-family: var(--ft-serif);
     color: var(--col-pink1);
 }
 
-.boutique .action::before{
+.boutique-action::before{
     content: "";
     background-image: url(/cdn/svg/pin.svg);
     background-repeat: no-repeat;
@@ -343,25 +343,25 @@ h2{
     height: 1rem;
 }
 
-.bonbon .liste{
+.bonbon-liste{
     display: flex;
     flex-direction: column;
 }
 
-.bonbon .type{
+.bonbon-type{
     display: flex;
     flex-direction: row;
     outline: var(--col-grey) .0625rem solid;
     border-radius: 1.5625rem;
 }
 
-.bonbon .miniature{
+.bonbon-miniature{
     height: 5rem;
     width: 5rem;
     border-radius: 1.5625rem 0 0 1.5625rem;
 }
 
 
-.boutique .card{
+.boutique-card{
     margin-bottom: 2rem;
 }
