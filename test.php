@@ -8,7 +8,7 @@
 <?php
 
 require_once("db.php");
-$test = requete("SELECT * FROM utilisateurs");
+$test = req("SELECT * FROM utilisateurs");
 
 echo ("<table>");
 foreach ($test as $t){

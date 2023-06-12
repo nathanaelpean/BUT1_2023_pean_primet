@@ -28,7 +28,7 @@ try {
 * donc cette fonction ne sera pas suffisante, vous devrez en créer d'autres plus pertinentes.
 */
 
-function requete($sql){
+function req($sql){
     global $PDO;
     $stmt = $PDO->query($sql);
     return $stmt->fetchAll();
