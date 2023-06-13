@@ -33,3 +33,15 @@ function req($sql){
     $stmt = $PDO->query($sql);
     return $stmt->fetchAll();
 }
+
+function search($array,$param,$value){
+    print_r("Array : ".$array."<br>Param : ".$param."<br>Value : ".$value);
+    foreach($array as $line){
+        if($line[$param] === $value){
+            return $line;
+            break;
+        }else{
+            return null;
+        }
+    }
+}
