@@ -348,8 +348,10 @@ h2{
     flex-direction: column;
 }
 
+
 .bonbon-type{
     display: flex;
+    gap: 0.5rem;
     flex-direction: row;
     outline: var(--col-grey) .0625rem solid;
     border-radius: 1.5625rem;
@@ -361,6 +363,11 @@ h2{
     border-radius: 1.5625rem 0 0 1.5625rem;
 }
 
+.bonbon-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
 
 .boutique-card{
     margin-bottom: 2rem;
