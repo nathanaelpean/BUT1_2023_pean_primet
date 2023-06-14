@@ -365,6 +365,13 @@ h2 {
     font-family: var(--ft-serif);
     color: var(--col-pink1);
     font-weight: 600;
+    font-size: 3rem;
+}
+
+h3{
+    font-family: var(--ft-serif);
+    color: var(--col-pink1);
+    font-weight: 500;
 }
 
 .info {
@@ -389,25 +396,30 @@ h2 {
 
 .bonbon-liste {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 2rem;
+    flex-wrap: wrap;
 }
 
 
 .bonbon-type {
     display: flex;
-    gap: 0.5rem;
-    flex-direction: row;
+    flex-direction: column;
     outline: var(--col-grey) .0625rem solid;
     border-radius: 1.5625rem;
+    height: 16.6875rem;
+    width: 19rem;
 }
 
-.bonbon-miniature {
-    height: 5rem;
-    width: 5rem;
-    border-radius: 1.5625rem 0 0 1.5625rem;
+.bonbon-miniature{
+    height: 70%;
+    width: 100%;
+    border-radius: 1.5625rem 1.5625rem 0 0;
 }
 
 .bonbon-info {
+.bonbon-info{
+    padding: 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
