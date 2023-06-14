@@ -101,6 +101,23 @@ a{
     margin-right: 10px;
 }
 
+.flex{
+    display: flex;
+}
+
+.data-list{
+    width: 400px;
+}
+
+.data-list > a{
+    border-bottom: 1px solid var(--col-grey);
+    text-decoration: none;
+}
+.data-list > a > p{
+    color: var(--col-grey);
+    font-family: var(--ft-serif);
+    padding-bottom: 15px;
+}
 
 /* Nav */
 nav{
