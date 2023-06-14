@@ -34,6 +34,16 @@ function req($sql){
     return $stmt->fetchAll();
 }
 
+function check_login($user, $mdp){
+    $tab = requete("SELECT * FROM utilisateurs WHERE username = '$user'");
+    if (md5($mdp) === $tab[0]["password"]){
+        return $tab[0];
+    }
+    else{
+        return 0;
+    }
+}
+
 function search($array,$param,$value){
     echo "Array : ";
     print_r($array);

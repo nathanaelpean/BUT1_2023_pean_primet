@@ -18,7 +18,6 @@
     <link rel="preconnect" href="//confiz.fyji.fr">
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" href="styles.css" as="style">
     <link rel="preload" href="./cdn/js/script.js" as="script">
     <link rel="stylesheet" href="./cdn/css/style.css">
     <script src="./cdn/js/script.js" defer></script>
@@ -34,3 +33,6 @@
     
     ?>
 </head>
+<?php
+session_start();
+?>

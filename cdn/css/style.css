@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Rochester&display=swap');
 
 /* Variables */
-:root{
+:root {
     --ft-serif: 'Sniglet', cursive;
     --ft-sserif: 'Rochester', cursive;
     --col-black: #000;
@@ -15,13 +15,13 @@
 }
 
 /* Global */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     padding: 3.75em 0 0 0;
     margin: 0;
     min-height: 100vh;
@@ -29,66 +29,71 @@ body{
     flex-direction: column;
 }
 
-.image{
+.image {
     background-position: center;
     background-size: cover;
 }
 
-button{
+button {
     border: 0.125rem solid var(--col-pink1);
     border-radius: 3em;
     padding: 0.6em 1em;
 }
 
-button.fill{
+button.fill {
     color: var(--col-white);
     background: var(--col-pink1);
 }
 
-button.stroke{
+button.stroke {
     color: var(--col-pink1);
     background: transparent;
 }
 
-form button{
+form button {
     width: 100%;
 }
 
-a{
+a {
     color: var(--col-pink1);
 }
 
-.form-compact{
+.form-compact {
     margin: 15px 5px;
     max-width: 400px;
     border: 2px solid var(--col-pink2);
     border-radius: 100px;
     z-index: 50;
 }
-.form-compact *{
+
+.form-compact * {
     font-family: var(--ft-serif);
 }
-.form-compact .box{
+
+.form-compact .box {
     display: flex;
     align-items: center;
     position: relative;
     width: 100%;
 }
-.form-compact .box legend{
+
+.form-compact .box legend {
     position: absolute;
     color: var(--col-pink1);
     background: var(--col-white);
-    transform: translate(20px,-20px);
+    transform: translate(20px, -20px);
     padding: 0 5px;
 }
-.form-compact .box input{
+
+.form-compact .box input {
     border: none;
     padding: 12px;
     background: transparent;
     width: 100%;
     border-radius: 100px;
 }
-.form-compact button.search{
+
+.form-compact button.search {
     width: 26px;
     height: 26px;
     border: none;
@@ -101,26 +106,27 @@ a{
     margin-right: 10px;
 }
 
-.flex{
+.flex {
     display: flex;
 }
 
-.data-list{
+.data-list {
     width: 400px;
 }
 
-.data-list > a{
+.data-list>a {
     border-bottom: 1px solid var(--col-grey);
     text-decoration: none;
 }
-.data-list > a > p{
+
+.data-list>a>p {
     color: var(--col-grey);
     font-family: var(--ft-serif);
     padding-bottom: 15px;
 }
 
 /* Nav */
-nav{
+nav {
     position: fixed;
     inset: 0 0 auto 0;
     height: 3.75em;
@@ -134,14 +140,14 @@ nav{
 }
 
 
-nav li{
+nav li {
     list-style-type: none;
     height: 3rem;
     min-width: 3rem;
     display: block;
 }
 
-nav .logo{
+nav .logo {
     background-image: url("../svg/logo-white.svg");
     width: 6.25rem;
     height: 2.9375rem;
@@ -149,7 +155,7 @@ nav .logo{
     margin-left: 2.5rem;
 }
 
-nav .hamburger{
+nav .hamburger {
     width: 1.875rem;
     height: 2.5rem;
     display: flex;
@@ -159,13 +165,15 @@ nav .hamburger{
     align-items: center;
 }
 
-nav .hamburger div{
+nav .hamburger div {
     background: var(--col-white);
     width: 100%;
     height: 0.375rem;
     border-radius: 6.25rem;
 }
-nav .hamburger div:before, nav .hamburger div:after{
+
+nav .hamburger div:before,
+nav .hamburger div:after {
     content: "";
     background: var(--col-white);
     width: 100%;
@@ -173,34 +181,39 @@ nav .hamburger div:before, nav .hamburger div:after{
     border-radius: 100px;
     position: absolute;
 }
-nav .hamburger div:before{
+
+nav .hamburger div:before {
     top: 0;
 }
-nav .hamburger div:after{
-    bottom: 0;  
+
+nav .hamburger div:after {
+    bottom: 0;
 }
 
-nav, nav *{
+nav,
+nav * {
     z-index: 50;
 }
 
-nav .items{
+nav .items {
     display: flex;
     padding: 10px 15px;
-    font-family: var(--ft-sserif); 
+    font-family: var(--ft-sserif);
     z-index: 40;
 }
-nav .items a{
+
+nav .items a {
     text-decoration: none;
     color: var(--col-white);
 }
 
-nav .items a:hover{
+nav .items a:hover {
     filter: drop-shadow(0 0 0.75rem white);
     transition: 0.5s;
 }
-@media(max-width:600px){
-    nav .items{
+
+@media(max-width:600px) {
+    nav .items {
         position: fixed;
         inset: 60px 0 auto 0;
         background-color: var(--col-white);
@@ -211,52 +224,57 @@ nav .items a:hover{
         transform: translateY(-300px);
     }
 
-    .items.active{
+    .items.active {
         transform: none;
     }
 
-    nav .items li{
+    nav .items li {
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    nav .items a{
+
+    nav .items a {
         color: var(--col-pink1);
     }
-    .hamburger:focus .items{
+
+    .hamburger:focus .items {
         transform: translateY(0px);
     }
 
-    nav .hamburger{
+    nav .hamburger {
         visibility: visible;
     }
 
-    nav .logo{
+    nav .logo {
         margin-left: 2.5rem;
     }
-    main{
+
+    main {
         padding: 5px;
     }
 }
-@media(min-width:600px){
-    nav .hamburger{
+
+@media(min-width:600px) {
+    nav .hamburger {
         visibility: hidden;
     }
-    
-    nav .logo{
+
+    nav .logo {
         margin-left: 0.5rem;
     }
 
-    nav .items{
+    nav .items {
         font-size: 2rem;
         gap: 2rem;
     }
-    main{
+
+    main {
         padding: 15px 150px;
     }
 }
 
-nav .action{
+nav .action {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -265,41 +283,46 @@ nav .action{
     position: relative;
     padding-left: 6px;
 }
-nav .action:before, nav .action:after{
+
+nav .action:before,
+nav .action:after {
     content: "";
     position: absolute;
     height: 100%;
 }
-nav .action:before{
+
+nav .action:before {
     width: 20px;
     background-color: var(--col-pink3);
     right: 100%;
 }
-nav .action:after{
+
+nav .action:after {
     width: 40px;
     background-color: var(--col-pink2);
     right: calc(100% + 20px);
 }
 
-nav .action a{
+nav .action a {
     display: block;
     height: 100%;
     width: 100%;
 }
 
-nav .action li{
+nav .action li {
     margin-right: 0.5rem;
 }
 
-nav .action .user{
+nav .action .user {
     background-image: url("../svg/user-3col.svg");
 }
-nav .action .cart{
+
+nav .action .cart {
     background-image: url("../svg/cart-3col.svg");
 }
 
 
-footer{
+footer {
     background-color: #CD1D72;
     width: 100%;
     display: flex;
@@ -309,23 +332,24 @@ footer{
     font-family: var(--ft-serif);
 }
 
-footer ul{
+footer ul {
     padding: 0;
 }
-footer a{
+
+footer a {
     color: white;
     text-decoration: underline;
 }
 
-footer p{
+footer p {
     margin: 0;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-.img-index{
+.img-index {
     display: block;
     width: calc(100% + 10px);
     aspect-ratio: 1 / 1;
@@ -337,39 +361,39 @@ li{
 
 /*Boutique.php */
 
-h2{
+h2 {
     font-family: var(--ft-serif);
     color: var(--col-pink1);
     font-weight: 600;
 }
 
-.info{
+.info {
     font-family: var(--ft-serif);
     color: var(--col-grey);
 }
 
-.boutique-action{
+.boutique-action {
     font-family: var(--ft-serif);
     color: var(--col-pink1);
 }
 
-.boutique-action::before{
+.boutique-action::before {
     content: "";
     background-image: url(/cdn/svg/pin.svg);
     background-repeat: no-repeat;
-    background-size: 1rem 1rem ;
+    background-size: 1rem 1rem;
     display: inline-block;
     width: 1rem;
     height: 1rem;
 }
 
-.bonbon-liste{
+.bonbon-liste {
     display: flex;
     flex-direction: column;
 }
 
 
-.bonbon-type{
+.bonbon-type {
     display: flex;
     gap: 0.5rem;
     flex-direction: row;
@@ -377,18 +401,24 @@ h2{
     border-radius: 1.5625rem;
 }
 
-.bonbon-miniature{
+.bonbon-miniature {
     height: 5rem;
     width: 5rem;
     border-radius: 1.5625rem 0 0 1.5625rem;
 }
 
-.bonbon-info{
+.bonbon-info {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
-.boutique-card{
+.boutique-card {
     margin-bottom: 2rem;
+}
+
+#map {
+    width: 100%;
+    height: 50vh;
+    display: block;
 }
