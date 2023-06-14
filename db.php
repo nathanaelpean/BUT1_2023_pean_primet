@@ -35,7 +35,7 @@ function req($sql){
 }
 
 function check_login($user, $mdp){
-    $tab = requete("SELECT * FROM utilisateurs WHERE username = '$user'");
+    $tab = req("SELECT * FROM utilisateurs WHERE username = '$user'");
     if (md5($mdp) === $tab[0]["password"]){
         return $tab[0];
     }
