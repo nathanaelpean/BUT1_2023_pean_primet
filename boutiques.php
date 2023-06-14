@@ -11,7 +11,7 @@ require_once("db.php");
     <main>
         <?php
             if(isset($_GET["id"])){
-                if(in_array($_GET["id"],req("SELECT boutique_id FROM boutiques"))){
+                if(in_array($_GET["id"], req("SELECT boutique_id FROM boutiques"))){
                     require_once("boutique.php");
                 }else{
                     require_once("404-frame.php");
