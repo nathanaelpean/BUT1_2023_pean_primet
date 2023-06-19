@@ -44,6 +44,10 @@ function check_login($user, $mdp){
     }
 }
 
+function user_data($id){
+    return req("SELECT * FROM utilisateurs WHERE utilisateur_id = '$id'")[0];
+}
+
 function search($array,$param,$value){
     echo "Array : ";
     print_r($array);
