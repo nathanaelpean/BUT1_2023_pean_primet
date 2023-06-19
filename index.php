@@ -7,10 +7,10 @@ require_once($root . "./components/head.php");
     <header>
         <?php require_once($root . '/components/navbar.php'); ?>
     </header>
-    <main>
+    <main class="accueil">
         <div class="flex">
             <div>
-                <img src="./cdn/svg/logo-3col.svg" width="100%">
+                <img src="./cdn/svg/logo-3col.svg" width="100%" draggable="false">
                 <div class="form-compact">
                     <form action="/boutiques" method="get">
                         <div class="box">

@@ -1,4 +1,4 @@
-<div class="form-compact">
+<div class="form-compact boutiques">
     <form action="/boutiques" method="get">
         <div class="box">
             <legend>Recherchez une boutique</legend>
@@ -7,19 +7,31 @@
         </div>
     </form>
 </div>
-<div class="flex">
+<div class="flex boutiques">
     <div class="data-list">
     <?php
-    $boutiques = req("SELECT * FROM boutiques");
+     if(isset($_GET["q"])){
+        $q = $_GET["q"];
+        $boutiques = req("SELECT * from boutiques WHERE nom LIKE '%$q%'");
+    }
+    else{
+        $boutiques = req("SELECT * FROM boutiques");
+    };
     $adresses = req("SELECT * FROM adresses");
-    foreach($boutiques as $boutique){ 
-        $adresse = $adresses[$boutique["adresse_id"]];
-    ?>
-        <a class="boutique" href="?id=<?= $boutique["boutique_id"] ?>">
-            <h2><?= $boutique["nom"] ?></h2>
-            <p><?= $adresse["numero_rue"].",".$adresse["nom_adresse"]."<br>".$adresse["code_postal"]." ".$adresse["ville"]." ".$adresse["pays"] ?></p>
-        </a>
-    <?php } ?>
+    if ($boutiques === []){
+        echo('<p>Aucun résultat! <a href="/boutiques">Afficher toutes les boutiques</a></p>');
+    }
+    else{
+        foreach($boutiques as $boutique){ 
+            $adresse = $adresses[$boutique["adresse_id"]];
+        ?>
+            <a class="boutique" href="?id=<?= $boutique["boutique_id"] ?>">
+                <h3><?= $boutique["nom"] ?></h3>
+                <p><?= $adresse["numero_rue"].",".$adresse["nom_adresse"]."<br>".$adresse["code_postal"]." ".$adresse["ville"]." ".$adresse["pays"] ?></p>
+            </a>
+        <?php }    
+    }
+     ?>
     </div>
     <div id="map"></div>
 

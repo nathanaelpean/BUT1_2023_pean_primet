@@ -12,6 +12,7 @@
     --col-pink1: #CD1D72;
     --col-pink2: #FF48A0;
     --col-pink3: #FFB1D7;
+    --ft-size : 1.1em;
 }
 
 /* Global */
@@ -27,6 +28,10 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+p{
+    font-size: var(--ft-size);
 }
 
 .image {
@@ -59,10 +64,10 @@ a {
 }
 
 .form-compact {
-    margin: 15px 5px;
-    max-width: 400px;
-    border: 2px solid var(--col-pink2);
-    border-radius: 100px;
+    margin: 2rem .3125rem;
+    max-width: 35rem;
+    border: .125rem solid var(--col-pink2);
+    border-radius: 6.25rem;
     z-index: 50;
 }
 
@@ -108,6 +113,11 @@ a {
 
 .flex {
     display: flex;
+}
+
+.flex>div{
+    margin-left: 2rem;
+    padding-top: 5rem;
 }
 
 .data-list {
@@ -160,8 +170,8 @@ nav .hamburger {
     height: 2.5rem;
     display: flex;
     position: fixed;
-    left: 0.3em;
-    top: 0.5em;
+    left: 0.3rem;
+    top: 0.5rem;
     align-items: center;
 }
 
@@ -249,10 +259,6 @@ nav .items a:hover {
     nav .logo {
         margin-left: 2.5rem;
     }
-
-    main {
-        padding: 5px;
-    }
 }
 
 @media(min-width:600px) {
@@ -267,10 +273,6 @@ nav .items a:hover {
     nav .items {
         font-size: 2rem;
         gap: 2rem;
-    }
-
-    main {
-        padding: 15px 150px;
     }
 }
 
@@ -321,6 +323,14 @@ nav .action .cart {
     background-image: url("../svg/cart-3col.svg");
 }
 
+main{
+    margin-left: 9.375rem;
+    min-height: calc(100vh - 3.75rem);
+}
+
+.accueil{
+    margin-left: 0;
+}
 
 footer {
     background-color: #CD1D72;
@@ -351,12 +361,10 @@ li {
 
 .img-index {
     display: block;
-    width: calc(100% + 10px);
-    aspect-ratio: 1 / 1;
-    transform: rotate(90deg);
+    width: calc(70%);
+    height: calc(100vh - 3.75rem);
     background-image: url("../img/bonbons1.png");
     background-position-x: 0;
-    margin: -5px;
 }
 
 /*Boutique.php */
@@ -382,6 +390,7 @@ h3{
 .boutique-action {
     font-family: var(--ft-serif);
     color: var(--col-pink1);
+    font-size: var(--ft-size);
 }
 
 .boutique-action::before {
@@ -418,7 +427,7 @@ h3{
 }
 
 .bonbon-info{
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem 0.5rem 0.5rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
