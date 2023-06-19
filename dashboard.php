@@ -10,7 +10,10 @@ $user_data = user_data($_SESSION["id"]);
         <?php require_once($root . '/components/navbar.php'); ?>
     </header>
     <main>
-        <p>Bonjour <?= $user_data["prenom"] ?></p>
+        <div class="flex ext">
+            <p>Bonjour <?= $user_data["prenom"] ?></p>
+            <a href="deconnexion">Déconnexion</a>
+        </div>
     </main>
     <?php require_once($root . '/components/footer.php'); ?>
 </body>
