@@ -30,7 +30,7 @@ $user_data = user_data($_SESSION["id"]);
             <?php } ?>
             <a href="deconnexion">Déconnexion</a>
         </div>
-        <div>
+        <div style="padding-top: 40px">
             <?php
                 if(isset($_GET["view"])){
                     if($_GET["view"] == "admin" && $_SESSION["role"] == "admin"){
