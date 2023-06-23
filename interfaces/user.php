@@ -1,16 +1,32 @@
 <?php
 $data = req("SELECT * FROM utilisateurs WHERE utilisateur_id = ".$_SESSION["id"].";")[0];
-print_r($data);
-if(isset($_GET["update_user"]) && $_GET["update_user"] === "true"){
+if(isset($_POST["update_user"]) && $_POST["update_user"] === "true"){
+    $id = $_SESSION["id"];
     $collected_data = array(
-        ""
+        "username" => $_POST["username"],
+        "role" => $_POST["role"],
+        "nom" => $_POST["nom"],
+        "prenom" => $_POST["prenom"],
+        "ddn" => $_POST["ddn"],
+        "email" => $_POST["email"],
+        "num_tel" => $_POST["num_tel"],
+        "password" => md5($_POST["password"])
     );
+    foreach($collected_data as $key=>$value){
+        if($value == ""){
+            $value = null;
+        }
+        if(req("SELECT $key FROM utilisateurs WHERE utilisateur_id = '$id';")[0][$key] !== $value){
+            // req("UPDATE utilisateurs $key='$value' WHERE utilisateur_id=$id;");
+            echo ("UPDATE utilisateurs $key='$value' WHERE utilisateur_id=$id;<br>");
+            req("UPDATE utilisateurs $key='$value' WHERE utilisateur_id=$id;<br>");
+        }
+    }
+    // echo '<script>window.location.href=window.location.href;</script>';
 }
 ?>
 
-Array ( [utilisateur_id] => 1 [0] => 1 [username] => alice82 [1] => alice82 [password] => 81dc9bdb52d04dc20036dbd8313ed055 [2] => 81dc9bdb52d04dc20036dbd8313ed055 [email] => [3] => [num_tel] => [4] => [role] => admin [5] => admin [nom] => Dumoulin [6] => Dumoulin [prenom] => Alice [7] => Alice [ddn] => 1982-11-26 [8] => 1982-11-26 )
-
-<form action="" action="post">
+<form action="" method="post">
     <input type="hidden" name="update_user" value="true">
     <div>
         <label for="username">Nom d'utilisateur</label>
@@ -29,27 +45,27 @@ Array ( [utilisateur_id] => 1 [0] => 1 [username] => alice82 [1] => alice82 [pas
     </div>
     <div>
         <label for="nom">Nom</label>
-        <input name="nom" id="nom" value="<?= $data["nom"] ?>" required>
+        <input name="nom" id="nom" value="<?= $data["nom"] ?>">
     </div>
     <div>
         <label for="prenom">Prénom</label>
-        <input name="prenom" id="prenom" value="<?= $data["prenom"] ?>" required>
+        <input name="prenom" id="prenom" value="<?= $data["prenom"] ?>">
     </div>
     <div>
         <label for="ddn">Date de naissance</label>
-        <input type="date" name="ddn" id="ddn" value="<?= $data["ddn"] ?>" required>
+        <input type="date" name="ddn" id="ddn" value="<?= $data["ddn"] ?>">
     </div>
     <div>
         <label for="email">Adresse mail</label>
-        <input type="mail" name="email" id="email" value="<?= $data["email"] ?>" required>
+        <input type="mail" name="email" id="email" value="<?= $data["email"] ?>">
     </div>
     <div>
         <label for="num_tel">Numéro de téléphone</label>
-        <input type="tel" name="num_tel" id="num_tel" value="<?= $data["num_tel"] ?>" required>
+        <input type="tel" name="num_tel" id="num_tel" value="<?= $data["num_tel"] ?>">
     </div>
     <div>
         <label for="password">Mot de passe</label>
-        <input name="password" id="password" required>
+        <input name="password" id="password">
     </div>
     <div>
         <button>Sauvegarder</button>
