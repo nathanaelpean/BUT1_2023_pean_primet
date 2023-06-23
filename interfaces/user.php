@@ -18,7 +18,6 @@ if(isset($_POST["update_user"]) && $_POST["update_user"] === "true"){
         }
         if(req("SELECT $key FROM utilisateurs WHERE utilisateur_id = '$id';")[0][$key] !== $value){
             req("UPDATE utilisateurs SET $key='$value' WHERE utilisateur_id=$id;");
-            echo ("UPDATE utilisateurs SET $key='$value' WHERE utilisateur_id=$id;<br>");
         }
     }
     echo '<script>window.location.href=window.location.href;</script>';
