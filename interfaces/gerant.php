@@ -46,8 +46,7 @@
         if(isset($_POST['remove-bonbon']) and is_numeric($_POST['remove-bonbon'])){
             $stockid = $_POST['remove-bonbon'];
             req("DELETE FROM stocks WHERE stock_id = '$stockid';");
-            unset($_POST);
-            $_POST = array();
+            echo '<script>window.location.href=window.location.href;</script>';
         }
         ?>
 </ul>

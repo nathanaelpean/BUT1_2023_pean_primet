@@ -23,7 +23,7 @@
         <ul class="bonbon-liste">
         <?php
         foreach($confiseries as $confiserie){
-            $info = req("SELECT * from confiseries WHERE confiserie_id = $confiserie[0];");
+            $info = req("SELECT * from confiseries WHERE confiserie_id = $confiserie[confiserie_id];");
             echo('
             <li class="bonbon-type">
                 <img class="bonbon-miniature" src="https://images.unsplash.com/photo-1499195333224-3ce974eecb47?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1051&q=80">
