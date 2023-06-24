@@ -59,9 +59,14 @@ button:hover{
     cursor: pointer;
 }
 
+form, form *{
+    font-family: var(--ft-serif);
+}
+
 form button {
     width: 100%;
 }
+
 
 button.delete{
     border-radius: none;
