@@ -17,10 +17,10 @@
                 <div class="bonbon-info">
                     <h3>'.$info[0]["nom"].'</h3 >
                     <p class="info">'.$info[0]["prix"].'€/unité</p>
-                    <form action="remove-bonbon.php?bonbon="'.$info[0]["confiserie_id"].'" method="get">
-                        <button class="delete" type="submit" name="bonbon" value="'.$info[0]["confiserie_id"].'">
-                    </form>
                 </div>
+                <form class="delete" action="remove-bonbon.php?bonbon="'.$info[0]["confiserie_id"].'" method="get">
+                        <button class="delete" type="submit" name="bonbon" value="'.$info[0]["confiserie_id"].'">
+                </form>
             </li>
             ');
         }?>
