@@ -35,6 +35,7 @@ $user_data = user_data($_SESSION["id"]);
                 if(isset($_GET["view"])){
                     if($_GET["view"] == "admin" && $_SESSION["role"] == "admin"){
                         require_once("./interfaces/admin.php");
+                        echo("<script>if()</script>");
                     }elseif($_GET["view"] == "gerant" && ($_SESSION["role"] == "admin" || $_SESSION["role"] == "gerant")){
                         require_once("./interfaces/gerant.php");
                     }else{

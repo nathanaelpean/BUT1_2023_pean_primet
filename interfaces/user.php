@@ -9,8 +9,8 @@ if(isset($_POST["update_user"]) && $_POST["update_user"] === "true"){
         "prenom" => $_POST["prenom"],
         "ddn" => $_POST["ddn"],
         "email" => $_POST["email"],
-        "num_tel" => $_POST["num_tel"],
-        "password" => md5($_POST["password"])
+        "num_tel" => $_POST["num_tel"]
+        // "password" => md5($_POST["password"])
     );
     foreach($collected_data as $key=>$value){
         if($value == ""){

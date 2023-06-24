@@ -17,7 +17,7 @@ Panneau à afficher :
         echo "ISSET";
         header('Location: http://www.example.com/');
         exit;
-        echo '<script>window.location.href='dashboard?section=users'</script>';
+        echo "<script>window.location.href='dashboard?section=users'</script>";
     }
     if($_GET["section"] === "shops"){
         if(isset($_POST["update"])){
@@ -36,8 +36,41 @@ Panneau à afficher :
                 }
                 echo '<script>window.location.href=window.location.href;</script>';
             }
-        }
+        } ?>
 
+        <form method="post" action="dashboard?section=shops">
+            <input type="hidden" name="update" value="<?= $shop["boutique_id"] ?>">
+            <h3><?= $shop["nom"] ?></h3>
+            <p>Adresse : 
+            <select name="adresse" id="">
+                <?php
+                    foreach(req("SELECT * FROM adresses") as $adresse){ ?>
+                        <option value="<?= $adresse["adresse_id"] ?>" required <?php if($shop["adresse_id"] === $adresse["adresse_id"]){echo "selected";} ?>><?= $adresse["numero_rue"].",".$adresse["nom_adresse"]." ".$adresse["code_postal"]." ".$adresse["ville"] ?></option>
+                    <?php }
+                ?>
+            </select> 
+            </p>
+            <p>Gérant :
+                <select name="gerant" id="">
+                <?php
+                    foreach(req("SELECT * FROM utilisateurs;") as $user){
+                        if($user["role"] === "gerant" || $user["role"] === "admin"){
+                        ?>
+                            <option value="<?= $user["utilisateur_id"] ?>" required <?php if($shop["utilisateur_id"] === $user["utilisateur_id"]){echo "selected";} ?>><?= $user["username"] ?></option>
+                        <?php
+                        }
+                    }
+                ?>
+                </select> 
+            </p>
+            <p>
+                <input type="checkbox" name="delete" id="del_<?= $shop["boutique_id"] ?>">
+                <label for="del_<?= $shop["boutique_id"] ?>">Supprimer cette boutique</label>
+            </p>
+            <button>Mettre à jour</button>
+            </form>
+
+        <?php
         foreach(req("SELECT * FROM boutiques;") as $shop){ ?>
         <form method="post" action="dashboard?section=shops">
             <input type="hidden" name="update" value="<?= $shop["boutique_id"] ?>">
