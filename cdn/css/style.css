@@ -55,8 +55,24 @@ button.stroke {
     background: transparent;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
 form button {
     width: 100%;
+}
+
+.delete{
+    border-radius: none;
+    border: none;
+    background-color: transparent;
+    background-image: url("../svg/trash.svg");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 2rem;
+    width: 2rem;
 }
 
 a {
@@ -380,6 +396,10 @@ h3{
     font-family: var(--ft-serif);
     color: var(--col-pink1);
     font-weight: 500;
+}
+
+h3>span{
+    color: var(--col-grey);
 }
 
 .info {

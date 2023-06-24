@@ -1,10 +1,10 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'];
 require_once($root . "./components/head.php");
-if($_SESSION["loggedin"]){
+/* if($_SESSION["loggedin"]){
     header("location: dashboard");
     exit();
-}
+} */
 ?>
 
 <body>
