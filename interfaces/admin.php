@@ -13,17 +13,28 @@ Panneau à afficher :
     });
 </script>
 <?php 
-    if(isset($_GET["section"]) && $_GET["section"] === "shops"){
+    if(!isset($_GET["section"])){
+        echo "ISSET";
+        header('Location: http://www.example.com/');
+        exit;
+        echo '<script>window.location.href='dashboard?section=users'</script>';
+    }
+    if($_GET["section"] === "shops"){
         if(isset($_POST["update"])){
             if($_POST["delete"]){
                 req("DELETE FROM boutiques WHERE boutique_id = '".$_POST["update"]."';");
             }else{
                 $collected_data = array(
-                    $id => $_POST["update"],
-                    $adresse => $_POST["adresse"],
-                    $gerant => $_POST["gerant"]
+                    "id" => $_POST["update"],
+                    "adresse" => $_POST["adresse"],
+                    "gerant" => $_POST["gerant"]
                 );
-
+                foreach($collected_data as $key=>$value){
+                    if(req("SELECT $key FROM boutiques WHERE boutique_id = '$id';")[0][$key] !== $value){
+                        req("UPDATE boutiques SET $key='$value' WHERE boutique_id=$id;");
+                    }
+                }
+                echo '<script>window.location.href=window.location.href;</script>';
             }
         }
 
@@ -35,7 +46,7 @@ Panneau à afficher :
             <select name="adresse" id="">
                 <?php
                     foreach(req("SELECT * FROM adresses") as $adresse){ ?>
-                        <option value="<?= $adresse["adresse_id"] ?>" <?php if($shop["adresse_id"] === $adresse["adresse_id"]){echo "selected";} ?>><?= $adresse["numero_rue"].",".$adresse["nom_adresse"]." ".$adresse["code_postal"]." ".$adresse["ville"] ?></option>
+                        <option value="<?= $adresse["adresse_id"] ?>" required <?php if($shop["adresse_id"] === $adresse["adresse_id"]){echo "selected";} ?>><?= $adresse["numero_rue"].",".$adresse["nom_adresse"]." ".$adresse["code_postal"]." ".$adresse["ville"] ?></option>
                     <?php }
                 ?>
             </select> 
@@ -46,7 +57,7 @@ Panneau à afficher :
                     foreach(req("SELECT * FROM utilisateurs;") as $user){
                         if($user["role"] === "gerant" || $user["role"] === "admin"){
                         ?>
-                            <option value="<?= $user["utilisateur_id"] ?>" <?php if($shop["utilisateur_id"] === $user["utilisateur_id"]){echo "selected";} ?>><?= $user["username"] ?></option>
+                            <option value="<?= $user["utilisateur_id"] ?>" required <?php if($shop["utilisateur_id"] === $user["utilisateur_id"]){echo "selected";} ?>><?= $user["username"] ?></option>
                         <?php
                         }
                     }
