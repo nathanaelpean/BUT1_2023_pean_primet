@@ -21,8 +21,7 @@
     <?php
         if(isset($_POST['addbonbon']) and is_numeric($_POST['addbonbon'])){
             req("INSERT INTO stocks (date_de_modification, confiserie_id, boutique_id) VALUES (CURRENT_DATE, '".$_POST['addbonbon']."','".$boutiqueInfo["boutique_id"]."');");
-            unset($_POST['addbonbon']);
-            $_POST['addbonbon'] = array();
+            echo '<script>window.location.href=window.location.href;</script>';
         };
     ?>
 </form>
